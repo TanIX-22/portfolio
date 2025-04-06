@@ -1,0 +1,119 @@
+/* Base Styles */
+body {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+/* Navigation */
+.nav-link {
+    position: relative;
+    padding: 0.5rem 0;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(to right, #6366f1, #10b981);
+    transition: width 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link:hover {
+    color: #6366f1;
+}
+
+.mobile-nav-link {
+    display: block;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.mobile-nav-link:hover {
+    background-color: rgba(99, 102, 241, 0.1);
+    color: #6366f1;
+    transform: translateX(5px);
+}
+
+/* Buttons */
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
+    background: linear-gradient(135deg, #8b5cf6, #6366f1);
+}
+
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    border: 2px solid #6366f1;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.btn-secondary:hover {
+    background-color: rgba(99, 102, 241, 0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(99, 102, 241, 0.2);
+    border-color: #8b5cf6;
+}
+
+.btn-hover-glow:hover {
+    animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+/* Form Elements */
+.form-input {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    color: #f8fafc;
+    border-radius: 0.5rem;
+    padding: 1rem 1.5rem;
+    width: 100%;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3);
+    background-color: #1e293b;
+}
+
+.form-input::placeholder {
+    color: #64748b;
+    opacity: 0.7;
+}
